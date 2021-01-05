@@ -1,7 +1,16 @@
 <h1 align="center">Hello World. Acebook is here.</h1>
+
+<%= form_for :user do |f| %>
+  <%= f.label "Profile Picture" %>
+  <%= f.file_field :avatar %><br> 
+  <%= f.submit %>
+<% end %>
+
+
   <%if @user %>
-    <%if @user.avatar.attached? %>
+    <% if @user.avatar.attached? %>
       <image src="<%=(url_for(@user.avatar))%>">
     <% end %>
   <% end %>
+
 <p>Find me in app/views/home/index.html.erb</p>
