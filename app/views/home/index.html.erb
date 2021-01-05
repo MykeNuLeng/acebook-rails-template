@@ -1,2 +1,7 @@
 <h1 align="center">Hello World. Acebook is here.</h1>
+  <%if @user %>
+    <%if @user.avatar.attached? %>
+      <image src="<%=(url_for(@user.avatar))%>">
+    <% end %>
+  <% end %>
 <p>Find me in app/views/home/index.html.erb</p>
