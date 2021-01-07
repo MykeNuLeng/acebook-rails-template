@@ -6,7 +6,11 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.posts.create(post_params)
+    if params[:post][:message].length > 0
+     @post = current_user.posts.create(post_params)
+    else
+      flash[:notice] = "What the hell! The post can not be empty!"
+    end
     redirect_to posts_url
   end
 
