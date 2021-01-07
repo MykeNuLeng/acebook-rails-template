@@ -35,6 +35,7 @@ gem 'gravtastic'
 gem "bulma-rails", "~> 0.9.1"
 
 gem 'commontator'
+gem 'acts_as_votable'
 gem 'jquery-rails'
 gem 'sassc-rails'
 
