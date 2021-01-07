@@ -1,0 +1,5 @@
+<%= form_for @post do |form| %>
+  <%= form.label :message %>
+  <%= form.text_area :message, value: Post.find_by(id: params[:id]).message %>
+  <%= form.submit "Submit" %>
+<% end %>

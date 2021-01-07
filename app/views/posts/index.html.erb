@@ -31,6 +31,7 @@
   <% end %>
   </div><!-- // like button -->
   <%= commontator_thread(post) %>
+  <%= link_to 'Edit', edit_post_path(post) %>
   <%= link_to 'Burn Post', post, method: :delete, data: { confirm: 'Are you sure?' } %>
   <div id="likes-count" style="width: 30px; float: right;">
   <% if post.likes.count != 0 %>
@@ -45,7 +46,7 @@
 </div><!-- // social-info -->
 </div><!-- // loop container -->
 
-  
+
 <% end %>
 </div><!--// newsfeed -->
 
