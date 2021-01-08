@@ -56,7 +56,6 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2, >= 2.2.2)
-    acts_as_votable (0.13.1)
     addressable (2.4.0)
     ansi (1.5.0)
     backports (3.20.1)
@@ -289,7 +288,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  acts_as_votable
   bulma-rails (~> 0.9.1)
   byebug
   capybara (~> 2.13)
