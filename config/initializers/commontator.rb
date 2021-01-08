@@ -32,7 +32,7 @@ Commontator.configure do |config|
   # Arguments: a user (acts_as_commontator)
   # Returns: the user's name (String)
   # Default: ->(user) { I18n.t('commontator.anonymous') } (all users are anonymous)
-  config.user_name_proc = ->(user) { I18n.t('commontator.anonymous') }
+  config.user_name_proc = lambda { |user| user.fname + " " + user.lname }
 
   # user_link_proc
   # Type: Proc
@@ -110,11 +110,11 @@ Commontator.configure do |config|
   # If specified, visible comments will be filtered according to this Arel node
   # A value of nil will cause no filtering to be done
   # Moderators can manually override this filter for themselves
-  # Example: Commontator::Comment.arel_table[:deleted_at].eq(nil) (hides deleted comments)
+
   #          This is not recommended, as it can cause confusion over deleted comments
   #          If using pagination, it can also cause comments to change pages
   # Default: nil (no filtering - all comments are visible)
-  config.comment_filter = nil
+  config.comment_filter = Commontator::Comment.arel_table[:deleted_at].eq(nil)
 
   # thread_read_proc
   # Type: Proc
@@ -151,7 +151,7 @@ Commontator.configure do |config|
   #   :n (never)
   # Note: For moderators, see the next option
   # Default: :l
-  config.comment_deletion = :l
+  config.comment_deletion = :a
 
   # moderator_permissions
   # Type: Symbol
@@ -172,7 +172,7 @@ Commontator.configure do |config|
   #   :l  (likes)
   #   :ld (likes/dislikes)
   # Default: :n
-  config.comment_voting = :n
+  # config.comment_voting = :n
 
   # vote_count_proc
   # Type: Proc
