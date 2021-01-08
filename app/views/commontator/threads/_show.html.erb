@@ -64,27 +64,19 @@
       <% end %>
     </span>
 
-<<<<<<< HEAD
+
 <div id="nested-comments">
-=======
->>>>>>> 84e866d1fb5f4458573c54e9cd0bf1715e85bb9c
+
     <span id="commontator-thread-<%= thread.id %>-status" class="status">
       <%= t "commontator.thread.status.#{thread.is_closed? ? 'closed' : 'open'}",
             closer_name: (thread.is_closed? ? Commontator.commontator_name(thread.closer) : '') %>
     </span>
-<<<<<<< HEAD
-=======
-  </div>
->>>>>>> 84e866d1fb5f4458573c54e9cd0bf1715e85bb9c
 
   <% if thread.config.comment_order == :l %>
     <%= render partial: 'commontator/threads/reply', locals: { thread: thread, user: user } %>
   <% end %>
-<<<<<<< HEAD
-=======
 
->>>>>>> 84e866d1fb5f4458573c54e9cd0bf1715e85bb9c
-  <div id="commontator-thread-<%= thread.id %>-comment-list" class="comment-list">
+    <div id="commontator-thread-<%= thread.id %>-comment-list" class="comment-list">
     <%=
       render partial: 'commontator/comments/list', locals: {
         user: user, nested_comments: nested_comments
@@ -122,7 +114,5 @@
 <script type="text/javascript">
   <%= render partial: 'commontator/threads/hide_show_links.js', locals: { thread: thread } %>
 </script>
-<<<<<<< HEAD
+
 </div><!-- // nested-comments -->
-=======
->>>>>>> 84e866d1fb5f4458573c54e9cd0bf1715e85bb9c
