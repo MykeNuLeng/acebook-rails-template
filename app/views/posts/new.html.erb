@@ -4,7 +4,7 @@
 <% end %>
 <div id="update-status">
 <%= form_for @post do |form| %>
-  <%= form.label :message %>
+  <%= form.label :What_the_hell_is_up? %>
   <%= form.text_area :message, :class => "input" %>
 
   <%= form.submit "Submit" %>
@@ -44,7 +44,7 @@
 
 <div id="timestamp" style="float: right; height: 40px; color: white; padding-right: 20px; padding-top: 5px;" ><%= post.created_at.to_formatted_s(:acebook_timestamp)%>
 </div><!-- // timestamp -->
-<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+<%= link_to 'Burn post', post, method: :delete, data: { confirm: 'Are you sure?' } %></div>
 </div><!-- // social-info -->
 </div><!-- // loop container -->
 <% end %>
@@ -52,12 +52,16 @@
 
 <div id="ad-column" class="column is-one-third" style="margin: 0 auto;">
   <div class="ad">
-    <img src="/satanberg.jpg">
+    <img src="/hulga.jpg">
     <h3>Holga wants to meet you!</h3>
   </div>
   <div class="ad">
-    <img src="/satanberg.jpg">
+    <img src="/jacked-clown.jpg">
     <h3>How I got abs by eating McDonalds!</h3>
+  </div>
+  <div class="ad">
+    <img src="/einstein.jpg">
+    <h3> How I learnt to code in only 5 minutes! </h3>
   </div>
 </div><!-- // ad column -->
 
