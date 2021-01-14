@@ -32,7 +32,6 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'gravtastic'
 
-gem "bulma-rails", "~> 0.9.1"
 
 gem 'commontator'
 gem 'jquery-rails'
